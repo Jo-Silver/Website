@@ -1,0 +1,48 @@
+:root{
+  --bg:#f6fbff;
+  --panel:#ffffff;
+  --accent:#0b63ff;
+  --muted:#6b7a90;
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background: linear-gradient(180deg,var(--bg),#eaf4ff);
+  color:#07203a;
+}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.site-header{backdrop-filter: blur(6px);background:linear-gradient(90deg,rgba(255,255,255,0.6),rgba(235,245,255,0.4));border-bottom:1px solid rgba(11,99,255,0.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;margin:0;color:var(--accent)}
+.nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+.nav a.active{color:var(--accent)}
+
+.main-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;padding-top:32px}
+.viewer{background:linear-gradient(180deg,#ffffff, #f3fbff);border-radius:12px;padding:18px;box-shadow: 0 6px 24px rgba(11,99,255,0.06);display:flex;align-items:center;justify-content:center;height:520px}
+#canvas-holder{position:relative;width:100%;height:100%;border-radius:8px;overflow:hidden}
+#three-canvas{width:100%;height:100%;display:block}
+.model-label{position:absolute;left:12px;bottom:12px;background:var(--glass);padding:6px 10px;border-radius:8px;font-weight:600;color:var(--accent);backdrop-filter: blur(4px)}
+
+.info{background:var(--panel);padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(2,16,38,0.04)}
+.info h2{margin-top:0;color:#04243a}
+.lead{color:var(--muted)}
+.specs{display:block;margin-top:12px}
+.specs dt{font-weight:700;color:#03203a}
+.specs dd{margin:4px 0 10px 0;color:var(--muted)}
+.cta{display:inline-block;margin-top:12px;padding:10px 14px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:700}
+
+.site-footer{padding:18px 0;color:var(--muted);text-align:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .main-grid{grid-template-columns:1fr;}
+  .info{order:2}
+  .viewer{height:420px}
+}
+
+/* Futuristic accent lines */
+.brand::after{content:"";display:block;height:4px;width:46px;background:linear-gradient(90deg,var(--accent),#4fb0ff);margin-top:6px;border-radius:4px}

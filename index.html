@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Learning Daedalus Dynamics — Homebase</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Homebase for the Learning Daedalus Dynamics — 3D model & description">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">Daedalus Dynamics</h1>
+      <nav class="nav">
+        <a href="index.html" class="active">Homebase</a>
+        <a href="instructions.html">Instructions</a>
+        <a href="contacts.html">Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="viewer">
+      <div id="canvas-holder">
+        <canvas id="three-canvas"></canvas>
+        <div class="model-label">3D model placeholder</div>
+      </div>
+    </section>
+
+    <aside class="info">
+      <h2>Prosthetic Arm — Prototype A</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+
+      <dl class="specs">
+        <dt>Material</dt>
+        <dd>Lightweight composite (placeholder)</dd>
+        <dt>Weight</dt>
+        <dd>~450g (placeholder)</dd>
+        <dt>Features</dt>
+        <dd>Modular joints, snap-fit parts, educational wiring harness</dd>
+      </dl>
+
+      <a class="cta" href="instructions.html">View Assembly Instructions</a>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Daedalus Dynamics — Demo placeholders only</small>
+    </div>
+  </footer>
+
+  <!-- Three.js from CDN -->
+  <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
