@@ -42,12 +42,46 @@
 
       <div id="electronics" class="chapter-panel">
         <h2>Electronics</h2>
-        <p><em>Placeholder content — add your electronics details here.</em></p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+        <p>The electronics systems across the three prosthetic research projects focus on sensing, actuation, control, and energy management, enabling intuitive and functional device operation.</p>
+
+        <h3>Sensing</h3>
+        <ul>
+          <li>Surface Electromyography (EMG) sensors detect muscle activity for myoelectric control, providing voltage signals that are amplified, rectified, and filtered to drive actuators.</li>
+          <li>Inertial Measurement Units (IMUs) track residual limb motion, capturing accelerometer and gyroscope data to model natural movement synergies for prosthetic wrist control.</li>
+          <li>Linear potentiometers provide feedback on actuator stroke displacement, enabling closed-loop position control.</li>
+        </ul>
+
+        <h3>Actuation</h3>
+        <ul>
+          <li>Linear actuators (e.g., Actuonix PQ 12-P) drive tendon-spring mechanisms for finger flexion and extension, offering precise stroke control with non-backdrivable mechanisms to maintain grip without continuous power.</li>
+          <li>DC motors and servo motors are used in tendon-driven and linkage-based systems for both hand and wrist movement.</li>
+        </ul>
+
+        <h3>Control Systems</h3>
+        <ul>
+          <li>Microcontrollers (Arduino Nano) implement real-time control algorithms developed in MATLAB/Simulink for finger grip patterns and energy-saving strategies.</li>
+          <li>Machine learning models—including neural networks and random forest regressors—decode user intent from IMU or EMG data and predict angular velocities for multi-degree-of-freedom wrist control.</li>
+          <li>Feedback control uses on-off and PID strategies to minimize steady-state error and reduce power consumption.</li>
+        </ul>
+
+        <h3>Power Management</h3>
+        <ul>
+          <li>Rechargeable Li-Ion batteries (e.g., 18650 cells) power actuators, sensors, and control boards.</li>
+          <li>Energy-efficient control algorithms deactivate motors when positional error is within tolerance, significantly extending battery life during continuous use.</li>
+        </ul>
+
+        <h3>Signal Processing & Communication</h3>
+        <ul>
+          <li>Low-pass filtering removes noise from EMG and IMU signals.</li>
+          <li>Motor drivers (e.g., L293D) manage actuator direction and speed.</li>
+          <li>Real-time embedded systems run at sampling rates up to 50–148 Hz, ensuring responsive and natural prosthetic movement.</li>
+        </ul>
+
+        <p>These electronic components and strategies collectively enable low-cost, responsive, and user-adaptive prosthetic systems suitable for daily living activities.</p>
       </div>
 
       <div id="user-experience" class="chapter-panel">
-        <h2>User Experience in Upper Limb Prosthetics</h2>
+        <h2>User Experience</h2>
         
         <h3>Key Challenges</h3>
         <ul>
