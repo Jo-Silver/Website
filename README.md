@@ -1,15 +1,3 @@
-# Daedalus Dynamics — Demo Static Site
-
-This is a small static demo site scaffold for a "Learning Daedalus Dynamics" with a white/blue futuristic theme. All images and copy are placeholders (lorem ipsum).
-
-Files created:
-
-- `index.html` — Homebase with a 3D model placeholder (Three.js).
-- `instructions.html` — Assembly instructions (placeholders).
-- `contacts.html` — Contact placeholders and a sample form.
-- `css/styles.css` — Theme and layout styles.
-- `js/main.js` — Simple Three.js scene for the rotating model.
-
 How to run locally:
 
 1. Open `index.html` directly in your browser (double-click) OR serve the folder with a static server.

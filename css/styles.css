@@ -44,5 +44,32 @@ body{
   .viewer{height:420px}
 }
 
+/* Knowledge Summary Layout */
+.knowledge-layout{display:grid;grid-template-columns:220px 1fr;gap:24px;padding-top:20px;padding-bottom:20px;align-items:start}
+
+.chapter-nav{display:flex;flex-direction:column;gap:8px;position:sticky;top:20px}
+.chapter-btn{background:var(--panel);border:none;padding:14px 18px;text-align:left;border-radius:8px;cursor:pointer;font-weight:600;color:var(--muted);transition:all 0.2s;box-shadow:0 2px 8px rgba(2,16,38,0.04);border-left:3px solid transparent}
+.chapter-btn:hover{background:linear-gradient(90deg,#f3fbff,#fff);color:var(--accent)}
+.chapter-btn.active{background:linear-gradient(90deg,var(--accent),#2b7aff);color:#fff;border-left-color:#0b4acc;box-shadow:0 4px 12px rgba(11,99,255,0.2)}
+
+.chapter-content{background:var(--panel);padding:28px;border-radius:12px;box-shadow:0 4px 20px rgba(2,16,38,0.06);min-height:500px}
+.chapter-panel{display:none}
+.chapter-panel.active{display:block}
+.chapter-panel h2{margin-top:0;color:var(--accent)}
+.chapter-panel h3{color:#04243a;margin-top:20px;margin-bottom:10px;font-size:1.1rem}
+.chapter-panel ul{line-height:1.7;color:#2a3f5f}
+.chapter-panel li{margin-bottom:8px}
+
+@media (max-width:900px){
+  .knowledge-layout{grid-template-columns:1fr}
+  .chapter-nav{position:static;flex-direction:row;flex-wrap:wrap}
+  .chapter-btn{flex:1 1 calc(50% - 8px)}
+}
+
+/* Instructions page styling */
+.instruction-step{background:var(--panel);padding:18px;margin:16px 0;border-radius:10px;box-shadow:0 4px 16px rgba(2,16,38,0.04)}
+.instruction-step h3{margin-top:0;color:var(--accent)}
+.placeholder-image{background:linear-gradient(135deg,#e3f2fd,#bbdefb);height:160px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:var(--muted);font-weight:600;margin-top:12px}
+
 /* Futuristic accent lines */
 .brand::after{content:"";display:block;height:4px;width:46px;background:linear-gradient(90deg,var(--accent),#4fb0ff);margin-top:6px;border-radius:4px}
