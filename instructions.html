@@ -21,37 +21,110 @@
 
   <main class="container" style="padding-top:28px">
     <h2>Assembly Instructions</h2>
-    <p class="lead">Follow these steps to assemble the prosthetic kit. Images and text are placeholders.</p>
+    <p class="lead">Follow these steps to assemble your 3D-printed prosthetic hand with servo-actuated finger control.</p>
 
-    <section class="instruction-step">
-      <h3>Step 1 — Unpack</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet.</p>
-      <div class="placeholder-image">Image placeholder</div>
+    <section class="instruction-step" style="display:flex; gap:24px; align-items:center;">
+      <div style="flex:1; min-width:0;">
+        <h3>Step 1 — Print and Prepare Components</h3>
+        <p>Begin by 3D printing all required parts using PLA or ABS filament. You will need:</p>
+        <ul>
+          <li>Hand palm assembly</li>
+          <li>5 finger segments (thumb, index, middle, ring, pinky)</li>
+          <li>Forearm mount</li>
+          <li>Servo motor housing</li>
+        </ul>
+        <p>Clean up any support material and test-fit all joints to ensure smooth articulation.</p>
+      </div>
+      <div class="placeholder-image" style="flex-shrink:0; width:350px;"><img src="resources/3d printer.png" alt="3D Printer" style="width:100%; height:250px; object-fit:cover; display:block; border-radius:8px;"></div>
     </section>
 
-    <section class="instruction-step">
-      <h3>Step 2 — Lay out parts</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-      <div class="placeholder-image">Image placeholder</div>
+    <section class="instruction-step" style="display:flex; gap:24px; align-items:center;">
+      <div class="placeholder-image" style="flex-shrink:0; width:350px;"><img src="resources/threading_needle_x2_0.jpg" alt="Threading wires through finger segments" style="width:100%; height:250px; object-fit:cover; display:block; border-radius:8px;"></div>
+      <div style="flex:1; min-width:0;">
+        <h3>Step 2 — Thread the Control Wires</h3>
+        <p>Cut fishing line or nylon thread to appropriate lengths for each finger (approximately 30-40cm). Thread the wire through the finger segments:</p>
+        <ol>
+          <li>Insert wire through the tip of each finger</li>
+          <li>Route through the knuckle joints</li>
+          <li>Pull wire down through the palm assembly</li>
+          <li>Leave 10-15cm of excess wire at the base for servo attachment</li>
+        </ol>
+        <p><strong>Tip:</strong> Use a thin needle or wire threader to guide the wire through narrow channels.</p>
+      </div>
     </section>
 
-    <section class="instruction-step">
-      <h3>Step 3 — Assemble forearm</h3>
-      <ol>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Consectetur adipiscing elit.</li>
-        <li>Suspendisse varius enim in eros elementum tristique.</li>
-      </ol>
-      <div class="placeholder-image">Image placeholder</div>
+    <section class="instruction-step" style="display:flex; gap:24px; align-items:center;">
+      <div style="flex:1; min-width:0;">
+        <h3>Step 3 — Install Servo Motors</h3>
+        <p>Mount the servo motors in the forearm housing or base assembly:</p>
+        <ol>
+          <li>Place 5 servo motors (one per finger) in their designated slots</li>
+          <li>Secure each servo with screws or mounting brackets</li>
+          <li>Attach servo horns and prepare for wire connection</li>
+          <li>Connect the control wires from each finger to its corresponding servo horn</li>
+          <li>Test tension — pulling the wire should curl the finger, releasing should extend it</li>
+        </ol>
+        <p><strong>Note:</strong> Add elastic return springs to the back of fingers if needed for passive extension.</p>
+      </div>
+      <div class="placeholder-image" style="flex-shrink:0; width:350px;"><img src="resources/Servo Motor.jpg" alt="Servo motor installation" style="width:100%; height:250px; object-fit:cover; display:block; border-radius:8px;"></div>
     </section>
 
-    <section class="instruction-step">
-      <h3>Step 4 — Attach hand and test</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
-      <div class="placeholder-image">Image placeholder</div>
+    <section class="instruction-step" style="display:flex; gap:24px; align-items:center;">
+      <div class="placeholder-image" style="flex-shrink:0; width:350px;"><img src="resources/arduino.jpeg" alt="Arduino electronics wiring" style="width:100%; height:250px; object-fit:cover; display:block; border-radius:8px;"></div>
+      <div style="flex:1; min-width:0;">
+        <h3>Step 4 — Wire the Electronics</h3>
+        <p>Connect the servo motors to your microcontroller (Arduino, Raspberry Pi, etc.):</p>
+        <ul>
+          <li><strong>Power:</strong> Connect all servo power wires (red) to 5-6V power supply</li>
+          <li><strong>Ground:</strong> Connect all ground wires (brown/black) to common ground</li>
+          <li><strong>Signal:</strong> Connect each servo signal wire (orange/yellow) to individual PWM pins on the microcontroller</li>
+          <li>Use a breadboard or custom PCB for organized wiring</li>
+        </ul>
+        <p><strong>Important:</strong> Ensure power supply can handle the current draw of all 5 servos simultaneously (typically 1-2A).</p>
+      </div>
     </section>
 
-    <p>For safety notes, maintenance tips, and wiring diagrams, replace these placeholders with your product-specific content.</p>
+    <section class="instruction-step" style="display:flex; gap:24px; align-items:center;">
+      <div style="flex:1; min-width:0;">
+        <h3>Step 5 — Program the Controller</h3>
+        <p>Upload control code to your microcontroller to enable finger movement:</p>
+        <ol>
+          <li>Install the Arduino IDE or Python libraries for your platform</li>
+          <li>Import servo control libraries (e.g., Servo.h for Arduino)</li>
+          <li>Follow our <a href="#" style="color:var(--accent); font-weight:600;">Programming Tutorial</a> to set up basic finger control</li>
+          <li>Calibrate servo positions for fully open and closed finger states</li>
+          <li>Test individual finger movements before proceeding</li>
+        </ol>
+        <p><strong>Sample Code:</strong> Basic servo control examples are available in the tutorial section.</p>
+      </div>
+      <div class="placeholder-image" style="flex-shrink:0; width:350px;"><img src="resources/coding.jpg" alt="Programming the controller" style="width:100%; height:250px; object-fit:cover; display:block; border-radius:8px;"></div>
+    </section>
+
+    <section class="instruction-step" style="display:flex; gap:24px; align-items:center;">
+      <div class="placeholder-image" style="flex-shrink:0; width:350px;"><img src="resources/Hand test.jpg" alt="Testing and calibrating the prosthetic hand" style="width:100%; height:250px; object-fit:cover; display:block; border-radius:8px;"></div>
+      <div style="flex:1; min-width:0;">
+        <h3>Step 6 — Test and Calibrate</h3>
+        <p>With everything assembled and programmed:</p>
+        <ul>
+          <li>Test each finger individually to verify proper range of motion</li>
+          <li>Adjust wire tension if fingers don't fully close or open</li>
+          <li>Check for binding or excessive friction in joints</li>
+          <li>Program grip patterns (pinch, grasp, point, etc.)</li>
+          <li>Add sensor input if using EMG or other control methods</li>
+        </ul>
+        <p><strong>Safety:</strong> Always test at low speeds first to avoid damaging the mechanism.</p>
+      </div>
+    </section>
+
+    <div style="margin-top:32px; padding:16px; background:#fff3cd; border-left:4px solid #ffc107; border-radius:6px;">
+      <h4 style="margin-top:0; color:#856404;">⚠️ Safety & Maintenance</h4>
+      <ul style="color:#856404; margin-bottom:0;">
+        <li>Never exceed servo voltage ratings (typically 4.8-6V)</li>
+        <li>Regularly inspect wires for fraying or wear</li>
+        <li>Lubricate joints with silicone grease if movement becomes stiff</li>
+        <li>Keep electronics away from water and moisture</li>
+      </ul>
+    </div>
   </main>
 
   <footer class="site-footer"><div class="container"><small>© 2025 DAEDALUS Dynamics — Demo placeholders only</small></div></footer>
