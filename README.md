@@ -9,6 +9,3 @@ python -m http.server 8000
 # then open http://localhost:8000 in your browser
 ```
 
-Notes:
-- The 3D model is a simple placeholder made from basic Three.js geometry. Replace `js/main.js` with your real model loader (GLTF/GLB) when ready.
-- Replace placeholder text and images with your real content.
