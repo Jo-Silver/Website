@@ -5,7 +5,6 @@ How to run locally:
 PowerShell (serve with Python):
 
 ```powershell
-cd "c:\Serious\University\Y3S1\Experts in Teams\Website"
 python -m http.server 8000
 # then open http://localhost:8000 in your browser
 ```
